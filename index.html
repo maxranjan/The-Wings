@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wings Prep/Public School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #171133;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            max-height: 100px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 15px;
+            background: #2b2d42;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            list-style-type: none;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 20px;
+            margin: 15px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #home>h1,
+        p {
+
+            text-align: center;
+        }
+
+
+        h2,
+        h3 {
+            color: #35424a;
+            text-align: center;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 5px;
+
+
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .team-member {
+            text-align: center;
+            width: 30%;
+        }
+
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #35424a;
+            color: #ffffff;
+            width: 100%;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #ffffff;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .team-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="School Logo" class="logo">
+        <h1>The Wings Prep/Public School</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#principal">Principal</a></li>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Our School</h1>
+        <div class="slider">
+            <div class="slides">
+                <img src="banner.JPG" alt="Image 1">
+            </div>
+            <!-- <button class="prev" onclick="changeSlide(-1, 'home')">&#10094;</button>
+            <button class="next" onclick="changeSlide(1, 'home')">&#10095;</button> -->
+        </div>
+        <p>Your journey to knowledge begins here. At The Wings Prep/Public School, we nurture and inspire students to
+            achieve their best.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>The Wings Prep/Public School is located at Khadi Bhandar Chock, Muzaffarpur, Bihar. Established to provide
+            quality education for students from Class 1 to Class 8, our school is dedicated to nurturing young minds and
+            fostering a love for learning.</p>
+    </section>
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>1. Full AC Class Rooms</li>
+            <li>2. Computer Lab</li>
+            <li>3. Playing Ground</li>
+            <li>4. Smart Class </li>
+            <li>5. Best Teachers</li>
+            <li>6. Art & Craft</li>
+            <li>7. Etc</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="https://disjaipur.edu.in/wp-content/uploads/2021/06/COMPUTER-LAB-1-Copy.jpg"
+                    alt="Gallery Image 1">
+                <img src="https://makoons.com/blogs/wp-content/uploads/2024/03/Exploring-Play-School-Franchise-Opportunities-in-India.jpg"
+                    alt="Gallery Image 2">
+                <img src="https://peyushbhatia.com/wp-content/uploads/2024/03/Self-Motivation-For-Students-Unfolding-The-Path-To-A-Successful-Life6540eec0205ba.jpg"
+                    alt="Gallery Image 3">
+            </div>
+            <button class="prev" onclick="changeSlide(-1, 'gallery')">&#10094;</button>
+            <button class="next" onclick="changeSlide(1, 'gallery')">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="principal">
+        <h2>Our Principal</h2>
+        <div class="team-section">
+            <div class="team-member">
+                <img src="sushant.jpg" alt="Principal">
+                <h3>Shushant Sinha</h3>
+                <p>Our principal is a dedicated educator with over six years of experience. He focuses on fostering
+                    academic excellence through inclusive learning environments and innovative programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers">
+        <h2>Our Teachers</h2>
+        <div class="team-section">
+            <div class="team-member">
+                <img src="https://img.lovepik.com/free-png/20210919/lovepik-male-teacher-teaching-png-image_400770637_wh1200.png"
+                    alt="Teacher 1">
+                <h3>Teacher Name 1</h3>
+                <p>This teacher specializes in mathematics and is passionate about making learning fun and engaging for
+                    every student.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://img.lovepik.com/free-png/20210919/lovepik-male-teacher-teaching-png-image_400770637_wh1200.png"
+                    alt="Teacher 2">
+                <h3>Teacher Name 2</h3>
+                <p>This teacher specializes in science and is dedicated to encouraging curiosity and critical thinking.
+                </p>
+            </div>
+            <div class="team-member">
+                <img src="https://img.lovepik.com/free-png/20210919/lovepik-male-teacher-teaching-png-image_400770637_wh1200.png"
+                    alt="Teacher 3">
+                <h3>Teacher Name 3</h3>
+                <p>This teacher specializes in literature and believes in the power of storytelling to inspire young
+                    minds.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Address: Khadi Bhandar Chock, Muzaffarpur, Bihar, India</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 The Wings Prep/Public School. All rights reserved.</p>
+        <p><b>Developed and Maintain by Dynamic Duo Solutions</b> </p>
+    </footer>
+
+    <script>
+        let currentSlide = {
+            home: 0,
+            gallery: 0
+        };
+
+        function showSlides(slider) {
+            const slides = document.querySelectorAll(`#${slider} .slides img`);
+            if (currentSlide[slider] >= slides.length) currentSlide[slider] = 0;
+            if (currentSlide[slider] < 0) currentSlide[slider] = slides.length - 1;
+
+            const offset = -currentSlide[slider] * 100;
+            document.querySelector(`#${slider} .slides`).style.transform = `translateX(${offset}%)`;
+        }
+
+        function changeSlide(n, slider) {
+            currentSlide[slider] += n;
+            showSlides(slider);
+        }
+
+        // Initialize the sliders
+        showSlides('home');
+        showSlides('gallery');
+    </script>
+</body>
+
+</html>
