@@ -7,8 +7,15 @@
     <title>The Wings Prep/Public School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        @font-face {
+    font-family: 'Raleway';
+    src: url('fonts/static/Raleway-Regular.ttf') format('truetype'); /* Adjust the path and format */
+    font-weight: normal;
+    font-style: normal;
+}
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Raleway' , sans-serif;
+            overflow-x: hidden;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -17,7 +24,7 @@
         header {
             background: #171133;
             color: #ffffff;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
         }
 
@@ -40,6 +47,7 @@
         }
 
         nav ul li {
+          
             margin: 0 15px;
         }
 
@@ -67,11 +75,20 @@
             text-align: center;
         }
 
-
-        h2,
+        #about p ,#teachers p,#principal p{
+            font-size: 20px;
+            color: gray;
+        }
+        
+        #features li{
+            font-size: 20px;
+            color: gray; 
+        }
+        
+        h1,
         h3 {
-            color: #35424a;
             text-align: center;
+           
         }
 
         .slider {
@@ -112,6 +129,41 @@
         .next {
             right: 10px;
         }
+/* slider features code */
+.slider1 {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides1 {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides1 img {
+  max-width: 100%;
+  display: block;
+}
+
+.button1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#prev1 {
+  left: 10px;
+}
+
+#next1 {
+  right: 10px;
+}
 
         .team-section {
             display: flex;
@@ -131,9 +183,61 @@
             margin-bottom: 10px;
         }
 
+         #get-in-touch {
+            padding: 20px;
+            margin: 15px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            height: auto;
+            margin: auto;
+        }
+
+        .contact-form div {
+            margin-bottom: 15px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button-container {
+            margin-top: 40px;
+            width:100%;
+            position:relative;
+        }
+
+        .send-button {
+            background-color: #171133;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .send-button:hover {
+            background-color: #ffcc00;
+        }
+
         footer {
             text-align: center;
-            padding: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
             background: #35424a;
             color: #ffffff;
             width: 100%;
@@ -167,21 +271,23 @@
 
 <body>
     <header>
+        <section style="background-color: #171133;">
         <img src="logo.jpg" alt="School Logo" class="logo">
         <h1>The Wings Prep/Public School</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#principal">Principal</a></li>
-                <li><a href="#teachers">Teachers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <p>Khadi Bhandar Chock, Muzaffarpur</p>
+    </section>
     </header>
-
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#principal">Principal</a></li>
+            <li><a href="#teachers">Teachers</a></li>
+            <li><a href="#get-in-touch">Contact</a></li>
+        </ul>
+    </nav>
     <section id="home">
-        <h1>Welcome to Our School</h1>
+        <h1>Welcome To Our School</h1>
         <div class="slider">
             <div class="slides">
                 <img src="banner.JPG" alt="Image 1">
@@ -194,34 +300,52 @@
     </section>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>The Wings Prep/Public School is located at Khadi Bhandar Chock, Muzaffarpur, Bihar. Established to provide
+        <h1>About Us</h1>
+        <p>The Wings Prep/Public School is located at Khadi Bhandar Chock, Muzaffarpur, Bihar. It was started on 1 april 2023.Established to provide
             quality education for students from Class 1 to Class 8, our school is dedicated to nurturing young minds and
-            fostering a love for learning.</p>
+            fostering a love for learning.
+            The aim of this School is to provide an all round formation of students and to impart sound education by inculcating healthy study habits,
+            discipline, self-reliance and moral values. The school also aims at forming students of quality to be leaders
+             in all walks of life and serve their fellow human beings in Justice, Truth and Love. Special attention is 
+             given to develop the students’ personality, initiative, originality and sense of national integration through
+              co-curricular activities, individually and in groups. Great importance is given to a high standard of morality and discipline.
+        </p>
     </section>
     <section id="features">
-        <h2>Features</h2>
-        <ul>
-            <li>1. Full AC Class Rooms</li>
-            <li>2. Computer Lab</li>
-            <li>3. Playing Ground</li>
-            <li>4. Smart Class </li>
-            <li>5. Best Teachers</li>
-            <li>6. Art & Craft</li>
-            <li>7. Etc</li>
-        </ul>
+        <h1>Features</h1>
+        <div class="slider1">
+            <div class="slides1">
+              <img src="images_slider1/artandcraft.jpg" alt="Image 1">
+              <img src="images_slider1/computerlab.jpg" alt="Image 2">
+              <img src="images_slider1/library.jpg" alt="Image 3">
+              <img src="images_slider1/playground.jpg" alt="Image 4">
+              <img src="images_slider1/smartclass.jpg" alt="Image 5">
+            </div>
+            <button id="prev1" class="button1" onclick="moveSlide(-1)">&#10094;</button>
+            <button id="next1" class="button1" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+          
+        <!-- <ul>
+            <li> Full AC Class Rooms</li>
+            <li> Computer Lab</li>
+            <li> Playing Ground</li>
+            <li> Smart Class </li>
+            <li> Best Teachers</li>
+            <li> Art & Craft</li>
+            <li> Etc</li>
+        </ul> -->
     </section>
 
     <section id="gallery">
-        <h2>Gallery</h2>
+        <h1>Gallery</h1>
         <div class="slider">
             <div class="slides">
                 <img src="https://disjaipur.edu.in/wp-content/uploads/2021/06/COMPUTER-LAB-1-Copy.jpg"
                     alt="Gallery Image 1">
                 <img src="https://makoons.com/blogs/wp-content/uploads/2024/03/Exploring-Play-School-Franchise-Opportunities-in-India.jpg"
                     alt="Gallery Image 2">
-                <img src="https://peyushbhatia.com/wp-content/uploads/2024/03/Self-Motivation-For-Students-Unfolding-The-Path-To-A-Successful-Life6540eec0205ba.jpg"
-                    alt="Gallery Image 3">
+                <!-- <img src="https://peyushbhatia.com/wp-content/uploads/2024/03/Self-Motivation-For-Students-Unfolding-The-Path-To-A-Successful-Life6540eec0205ba.jpg"
+                    alt="Gallery Image 3"> -->
             </div>
             <button class="prev" onclick="changeSlide(-1, 'gallery')">&#10094;</button>
             <button class="next" onclick="changeSlide(1, 'gallery')">&#10095;</button>
@@ -229,7 +353,7 @@
     </section>
 
     <section id="principal">
-        <h2>Our Principal</h2>
+        <h1>Our Principal</h1>
         <div class="team-section">
             <div class="team-member">
                 <img src="sushant.jpg" alt="Principal">
@@ -241,31 +365,59 @@
     </section>
 
     <section id="teachers">
-        <h2>Our Teachers</h2>
+        <h1>Our Teachers</h1>
         <div class="team-section">
             <div class="team-member">
-                <img src="https://img.lovepik.com/free-png/20210919/lovepik-male-teacher-teaching-png-image_400770637_wh1200.png"
+                <img src="teacher1.jpeg"
                     alt="Teacher 1">
-                <h3>Teacher Name 1</h3>
+                <h3>Swet Kamal</h3>
                 <p>This teacher specializes in mathematics and is passionate about making learning fun and engaging for
                     every student.</p>
             </div>
             <div class="team-member">
                 <img src="https://img.lovepik.com/free-png/20210919/lovepik-male-teacher-teaching-png-image_400770637_wh1200.png"
                     alt="Teacher 2">
-                <h3>Teacher Name 2</h3>
+                <h3>Comming Soon</h3>
                 <p>This teacher specializes in science and is dedicated to encouraging curiosity and critical thinking.
                 </p>
             </div>
             <div class="team-member">
                 <img src="https://img.lovepik.com/free-png/20210919/lovepik-male-teacher-teaching-png-image_400770637_wh1200.png"
                     alt="Teacher 3">
-                <h3>Teacher Name 3</h3>
+                <h3>Comming Soon</h3>
                 <p>This teacher specializes in literature and believes in the power of storytelling to inspire young
                     minds.</p>
             </div>
         </div>
     </section>
+
+    <section id="get-in-touch">
+        <h1>Contact Us</h1>
+            <form class="contact-form" id="contact-form" onsubmit="sendEmail(event)">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Mobile No</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="send-button">Send Message</button>
+                </div>
+            </form>
+            <br>
+            
+    </section>
+    
 
     <footer>
         <p>Address: Khadi Bhandar Chock, Muzaffarpur, Bihar, India</p>
@@ -276,7 +428,7 @@
             <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <p>&copy; 2024 The Wings Prep/Public School. All rights reserved.</p>
-        <p><b>Developed and Maintain by Dynamic Duo Solutions</b> </p>
+        <p><b>Developed and Maintained by Dynamic Duo Solutions</b> </p>
     </footer>
 
     <script>
@@ -303,6 +455,80 @@
         showSlides('home');
         showSlides('gallery');
     </script>
+
+    <!-- script for contact us (get in touch ) page-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("jlc7rd4_IUfL0u3sG");
+        })();
+    
+        function sendEmail(event) {
+            console.log("hi");      
+            event.preventDefault(); 
+             // Get form elements
+             const form = event.target;
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const mobile = form.subject.value.trim();
+            const message = form.message.value.trim();
+    
+            // Validation: Check if all fields are filled
+            if (!name || !email || !mobile || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+    
+            // Optional: Additional validation for email and mobile (basic checks)
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+    
+            const mobileRegex = /^[0-9]{10}$/; // Assuming mobile number should be exactly 10 digits
+            if (!mobileRegex.test(mobile)) {
+                alert("Please enter a valid mobile number (10 digits).");
+                return;
+            }
+    
+            const serviceID = "service_ngvxjnj"; 
+            const templateID = "template_y4etakp"; 
+    
+            emailjs.sendForm(serviceID, templateID, event.target)
+                .then(() => {
+                    alert('Message sent successfully!');
+                }, (err) => {
+                    alert('Failed to send the message. Please try again later.');
+                    console.error(err);
+                });
+        }
+    </script>
+    <!-- slider for features -->
+    <script>
+        let slideIndex = 0;
+        showSlide(slideIndex);
+        
+        function moveSlide(n) {
+          showSlide(slideIndex += n);
+        }
+        
+        function showSlide(n) {
+          const slides1 = document.querySelectorAll('.slides1 img');
+          if (n >= slides1.length) { slideIndex = 0; }
+          if (n < 0) { slideIndex = slides1.length - 1; } // Fixed typo: changed 'slides' to 'slides1'
+          slides1.forEach((slide1, index) => {
+            slide1.style.display = (index === slideIndex) ? "block" : "none";
+          });
+        }
+        
+        // Timer to automatically advance the slide every 3 seconds
+        setInterval(() => {
+          showSlide(slideIndex += 1);
+        }, 3000);
+    </script>
+    
+    
 </body>
 
 </html>
