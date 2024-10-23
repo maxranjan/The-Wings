@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @font-face {
-    font-family: 'Raleway';
-    src: url('fonts/static/Raleway-Regular.ttf') format('truetype'); /* Adjust the path and format */
-    font-weight: normal;
-    font-style: normal;
-}
+            font-family: 'Raleway';
+            src: url('fonts/static/Raleway-Regular.ttf') format('truetype');
+            /* Adjust the path and format */
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            font-family: 'Raleway' , sans-serif;
+            font-family: 'Raleway', sans-serif;
             overflow-x: hidden;
             margin: 0;
             padding: 0;
@@ -47,7 +49,7 @@
         }
 
         nav ul li {
-          
+
             margin: 0 15px;
         }
 
@@ -69,26 +71,33 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        section h1:hover {
+            background-color: transparent;
+            color: red;
+        }
+
         #home>h1,
         p {
 
             text-align: center;
         }
 
-        #about p ,#teachers p,#principal p{
+        #about p,
+        #teachers p,
+        #principal p {
             font-size: 20px;
             color: gray;
         }
-        
-        #features li{
+
+        #features li {
             font-size: 20px;
-            color: gray; 
+            color: gray;
         }
-        
+
         h1,
         h3 {
             text-align: center;
-           
+
         }
 
         .slider {
@@ -129,41 +138,42 @@
         .next {
             right: 10px;
         }
-/* slider features code */
-.slider1 {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-}
 
-.slides1 {
-  display: flex;
-  transition: transform 0.5s ease;
-}
+        /* slider features code */
+        .slider1 {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
 
-.slides1 img {
-  max-width: 100%;
-  display: block;
-}
+        .slides1 {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
-.button1 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-}
+        .slides1 img {
+            max-width: 100%;
+            display: block;
+        }
 
-#prev1 {
-  left: 10px;
-}
+        .button1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
 
-#next1 {
-  right: 10px;
-}
+        #prev1 {
+            left: 10px;
+        }
+
+        #next1 {
+            right: 10px;
+        }
 
         .team-section {
             display: flex;
@@ -181,9 +191,15 @@
             border-radius: 50%;
             max-width: 150px;
             margin-bottom: 10px;
+            transition: box-shadow 0.3s ease;
         }
 
-         #get-in-touch {
+        .team-member img:hover {
+            box-shadow: 0 0 20px yellow;
+            /* Yellow shadow */
+        }
+
+        #get-in-touch {
             padding: 20px;
             margin: 15px;
             background: #ffffff;
@@ -216,8 +232,8 @@
 
         .button-container {
             margin-top: 40px;
-            width:100%;
-            position:relative;
+            width: 100%;
+            position: relative;
         }
 
         .send-button {
@@ -254,6 +270,44 @@
             color: #ffcc00;
         }
 
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+                text-align: center;
+                list-style-type: decimal;
+                list-style-position: inside;
+                /* Hide navbar items initially */
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            nav ul li {
+                padding: 3px;
+            }
+
+            nav ul.show {
+                display: flex;
+                /* Show navbar items when toggled */
+            }
+
+            .hamburger {
+                display: block;
+                /* Show hamburger icon on mobile */
+            }
+        }
+
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .team-section {
@@ -265,19 +319,66 @@
                 width: 80%;
                 margin-bottom: 20px;
             }
+
         }
+
+
+        /* pop up  */
+        .popup {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Black background with opacity */
+        }
+
+        .popup-content {
+            background-color: #ffffff;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* pop up  */
     </style>
 </head>
 
 <body>
     <header>
         <section style="background-color: #171133;">
-        <img src="logo.jpg" alt="School Logo" class="logo">
-        <h1>The Wings Prep/Public School</h1>
-        <p>Khadi Bhandar Chock, Muzaffarpur</p>
-    </section>
+            <img src="logo.jpg" alt="School Logo" class="logo">
+            <h1>The Wings Prep/Public School</h1>
+            <p>Khadi Bhandar Chock, Muzaffarpur</p>
+        </section>
     </header>
-    <nav>
+    <!-- <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -285,7 +386,20 @@
             <li><a href="#teachers">Teachers</a></li>
             <li><a href="#get-in-touch">Contact</a></li>
         </ul>
+    </nav> -->
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#principal">Principal</a></li>
+            <li><a href="#teachers">Core Member</a></li>
+            <li><a href="#get-in-touch">Contact</a></li>
+        </ul>
     </nav>
+
     <section id="home">
         <h1>Welcome To Our School</h1>
         <div class="slider">
@@ -299,41 +413,77 @@
             achieve their best.</p>
     </section>
 
+
+    <!-- pop up -->
+
+    <div id="welcomePopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h1>Welcome to The Wings Prep/Public School!</h1>
+            <h4>Khadi Bhandar Chock, Muzaffarpur</h4>
+            <h4>Mobile no - <a href="tel:9117824021">9117824021</a> | <a href="tel:9334333753">9334333753</a> || Email - <a href="mailto:thewingspublicschool@gmail.com">thewingspublicschool@gmail.com</a></h4>
+            <p>We are excited to have you here. Explore our website to learn more about our programs and values!</p>
+            <p>Thanks For Visiting Us.</p>
+            <h6>Developed & Maintained by - <a href="https://www.instagram.com/dynamic_duo_solutions/profilecard/?igsh=MWg3amF1NDI2dTk0OQ==">Dynamic Duo Solutions</a> </h6>
+        </div>
+    </div>
+    
+    
     <section id="about">
         <h1>About Us</h1>
-        <p>The Wings Prep/Public School is located at Khadi Bhandar Chock, Muzaffarpur, Bihar. It was started on 1 april 2023.Established to provide
+        <p>The Wings Prep/Public School is located at Khadi Bhandar Chock, Muzaffarpur, Bihar. It was started on 1 april
+            2023.Established to provide
             quality education for students from Class 1 to Class 8, our school is dedicated to nurturing young minds and
             fostering a love for learning.
-            The aim of this School is to provide an all round formation of students and to impart sound education by inculcating healthy study habits,
-            discipline, self-reliance and moral values. The school also aims at forming students of quality to be leaders
-             in all walks of life and serve their fellow human beings in Justice, Truth and Love. Special attention is 
-             given to develop the students’ personality, initiative, originality and sense of national integration through
-              co-curricular activities, individually and in groups. Great importance is given to a high standard of morality and discipline.
+            The aim of this School is to provide an all round formation of students and to impart sound education by
+            inculcating healthy study habits,
+            discipline, self-reliance and moral values. The school also aims at forming students of quality to be
+            leaders
+            in all walks of life and serve their fellow human beings in Justice, Truth and Love. Special attention is
+            given to develop the students’ personality, initiative, originality and sense of national integration
+            through
+            co-curricular activities, individually and in groups. Great importance is given to a high standard of
+            morality and discipline.
         </p>
     </section>
+
+    <section id="notice">
+        <h1>Notice Board</h1>
+        <h2>1. Important Announcements</h2>
+        <li>Registration Start for New Seasson</li>
+        <li>Upcoming sports events, competitions, and clubs</li>
+        <li>Emergency announcements (e.g., weather-related closures)</li>
+
+        <h2>2. Academic Information</h2>
+        <li>Exam schedules and results - <a href="#"> Click Here</a></li>
+        <li>Curriculum updates - <a href="#"> Click Here</a></li>
+        <li>Study resources or tips - <a href="#"> Click Here</a></li>
+
+        <h2>3. Community News </h2>
+        <li>Local events and activities relevant to students and families</li>
+        <li> Volunteer opportunities</li>
+
+        <h2>4. Important Dates</h2>
+        <li> School holidays and breaks - <a href="#"> Click Here</a></li>
+        <li>Registration deadlines for events or courses - <a href="#"> Click Here</a></li>
+
+    </section>
+
+
     <section id="features">
         <h1>Features</h1>
         <div class="slider1">
             <div class="slides1">
-              <img src="images_slider1/artandcraft.jpg" alt="Image 1">
-              <img src="images_slider1/computerlab.jpg" alt="Image 2">
-              <img src="images_slider1/library.jpg" alt="Image 3">
-              <img src="images_slider1/playground.jpg" alt="Image 4">
-              <img src="images_slider1/smartclass.jpg" alt="Image 5">
+                <img src="images_slider1/artandcraft.jpg" alt="Image 1">
+                <img src="images_slider1/computerlab.jpg" alt="Image 2">
+                <img src="images_slider1/library.jpg" alt="Image 3">
+                <img src="images_slider1/playground.jpg" alt="Image 4">
+                <img src="images_slider1/smartclass.jpg" alt="Image 5">
             </div>
             <button id="prev1" class="button1" onclick="moveSlide(-1)">&#10094;</button>
             <button id="next1" class="button1" onclick="moveSlide(1)">&#10095;</button>
-          </div>
-          
-        <!-- <ul>
-            <li> Full AC Class Rooms</li>
-            <li> Computer Lab</li>
-            <li> Playing Ground</li>
-            <li> Smart Class </li>
-            <li> Best Teachers</li>
-            <li> Art & Craft</li>
-            <li> Etc</li>
-        </ul> -->
+        </div>
+
     </section>
 
     <section id="gallery">
@@ -357,7 +507,7 @@
         <div class="team-section">
             <div class="team-member">
                 <img src="sushant.jpg" alt="Principal">
-                <h3>Shushant Sinha</h3>
+                <h3>Sushant Sinha</h3>
                 <p>Our principal is a dedicated educator with over six years of experience. He focuses on fostering
                     academic excellence through inclusive learning environments and innovative programs.</p>
             </div>
@@ -365,19 +515,17 @@
     </section>
 
     <section id="teachers">
-        <h1>Our Teachers</h1>
+        <h1>Core Member</h1>
         <div class="team-section">
             <div class="team-member">
-                <img src="teacher1.jpeg"
-                    alt="Teacher 1">
+                <img src="teacher1.jpeg" alt="Teacher 1">
                 <h3>Swet Kamal</h3>
                 <p>This teacher specializes in mathematics and is passionate about making learning fun and engaging for
                     every student.</p>
             </div>
             <div class="team-member">
-                <img src="https://img.lovepik.com/free-png/20210919/lovepik-male-teacher-teaching-png-image_400770637_wh1200.png"
-                    alt="Teacher 2">
-                <h3>Comming Soon</h3>
+                <img src="teacher.jpg" alt="Teacher 2">
+                <h3>Piyush Anand</h3>
                 <p>This teacher specializes in science and is dedicated to encouraging curiosity and critical thinking.
                 </p>
             </div>
@@ -393,31 +541,31 @@
 
     <section id="get-in-touch">
         <h1>Contact Us</h1>
-            <form class="contact-form" id="contact-form" onsubmit="sendEmail(event)">
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="subject">Mobile No</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <div class="button-container">
-                    <button type="submit" class="send-button">Send Message</button>
-                </div>
-            </form>
-            <br>
-            
+        <form class="contact-form" id="contact-form" onsubmit="sendEmail(event)">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="subject">Mobile No</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="send-button">Send Message</button>
+            </div>
+        </form>
+        <br>
+
     </section>
-    
+
 
     <footer>
         <p>Address: Khadi Bhandar Chock, Muzaffarpur, Bihar, India</p>
@@ -459,42 +607,42 @@
     <!-- script for contact us (get in touch ) page-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function(){
+        (function () {
             emailjs.init("jlc7rd4_IUfL0u3sG");
         })();
-    
+
         function sendEmail(event) {
-            console.log("hi");      
-            event.preventDefault(); 
-             // Get form elements
-             const form = event.target;
+            console.log("hi");
+            event.preventDefault();
+            // Get form elements
+            const form = event.target;
             const name = form.name.value.trim();
             const email = form.email.value.trim();
             const mobile = form.subject.value.trim();
             const message = form.message.value.trim();
-    
+
             // Validation: Check if all fields are filled
             if (!name || !email || !mobile || !message) {
                 alert("Please fill in all fields.");
                 return;
             }
-    
+
             // Optional: Additional validation for email and mobile (basic checks)
             const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
             if (!emailRegex.test(email)) {
                 alert("Please enter a valid email address.");
                 return;
             }
-    
+
             const mobileRegex = /^[0-9]{10}$/; // Assuming mobile number should be exactly 10 digits
             if (!mobileRegex.test(mobile)) {
                 alert("Please enter a valid mobile number (10 digits).");
                 return;
             }
-    
-            const serviceID = "service_ngvxjnj"; 
-            const templateID = "template_y4etakp"; 
-    
+
+            const serviceID = "service_ngvxjnj";
+            const templateID = "template_y4etakp";
+
             emailjs.sendForm(serviceID, templateID, event.target)
                 .then(() => {
                     alert('Message sent successfully!');
@@ -508,27 +656,49 @@
     <script>
         let slideIndex = 0;
         showSlide(slideIndex);
-        
+
         function moveSlide(n) {
-          showSlide(slideIndex += n);
+            showSlide(slideIndex += n);
         }
-        
+
         function showSlide(n) {
-          const slides1 = document.querySelectorAll('.slides1 img');
-          if (n >= slides1.length) { slideIndex = 0; }
-          if (n < 0) { slideIndex = slides1.length - 1; } // Fixed typo: changed 'slides' to 'slides1'
-          slides1.forEach((slide1, index) => {
-            slide1.style.display = (index === slideIndex) ? "block" : "none";
-          });
+            const slides1 = document.querySelectorAll('.slides1 img');
+            if (n >= slides1.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides1.length - 1; } // Fixed typo: changed 'slides' to 'slides1'
+            slides1.forEach((slide1, index) => {
+                slide1.style.display = (index === slideIndex) ? "block" : "none";
+            });
         }
-        
+
         // Timer to automatically advance the slide every 3 seconds
         setInterval(() => {
-          showSlide(slideIndex += 1);
+            showSlide(slideIndex += 1);
         }, 3000);
+
+
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('show');
+        }
     </script>
-    
-    
+
+    <!-- pop up -->
+    <script>
+        // Show the popup after 1 second
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById('welcomePopup').style.display = 'block';
+            }, 1000); // 1000 milliseconds = 1 second
+        };
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('welcomePopup').style.display = 'none';
+        }
+    </script>
+
+
+
 </body>
 
 </html>
